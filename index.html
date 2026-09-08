@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bir Hikâyenin İçinde ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game">
+
+    <!-- BAŞLANGIÇ -->
+    <section id="startScreen" class="screen active">
+        <div class="heart">♡</div>
+
+        <h1>Bir Hikâyenin İçinde</h1>
+
+        <p>
+            Bu oyunun sonuna kadar ilerleyebilir misin?
+        </p>
+
+        <p class="small">
+            Her seçimin seni biraz daha sona yaklaştıracak...
+        </p>
+
+        <button id="startButton">HİKÂYEYE BAŞLA →</button>
+    </section>
+
+
+    <!-- OYUN -->
+    <section id="gameScreen" class="screen">
+
+        <div class="top">
+            <span id="chapter">BÖLÜM 1</span>
+            <span id="hearts">♡ ♡ ♡</span>
+        </div>
+
+        <div class="scene">
+
+            <div class="character">
+               <img src="./karakter.jpg" alt="Karakter">
+            </div>
+
+            <div class="dialogue">
+                <h2 id="name">O</h2>
+                <p id="text">...</p>
+            </div>
+
+        </div>
+
+        <div id="choices" class="choices"></div>
+
+        <button id="continueButton" class="continue">
+            DEVAM ET →
+        </button>
+
+    </section>
+
+
+    <!-- SON -->
+    <section id="endingScreen" class="screen">
+
+        <div class="bigHeart">♥</div>
+
+        <h1>Sonunda buraya geldin.</h1>
+
+        <p>
+            Aslında bütün bilmecelerin,<br>
+            bütün seçimlerin tek bir amacı vardı.
+        </p>
+
+        <p class="question">
+            Benimle çıkar mısın?
+        </p>
+
+        <div class="finalButtons">
+            <button id="yesButton">EVET ❤️</button>
+            <button id="noButton">HAYIR</button>
+        </div>
+
+        <p id="finalMessage"></p>
+
+    </section>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>

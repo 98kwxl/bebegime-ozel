@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: Georgia, serif;
+    min-height: 100vh;
+}
+
+.game {
+    width: 100%;
+    max-width: 700px;
+    min-height: 100vh;
+    margin: auto;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    padding: 30px 22px;
+}
+
+.screen.active {
+    display: flex;
+    flex-direction: column;
+}
+
+#startScreen {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, #321522 0%, #111 55%);
+}
+
+.heart {
+    font-size: 90px;
+    color: #ff4f91;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+#startScreen p {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.small {
+    font-size: 15px !important;
+    opacity: .6;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+#startButton {
+    margin-top: 40px;
+    padding: 16px 30px;
+    border-radius: 30px;
+    background: #ff4f91;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 0 25px #ff4f9166;
+}
+
+#gameScreen {
+    background: #f7f7f7;
+    color: #111;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+#hearts {
+    color: #ff4f91;
+    font-size: 23px;
+    letter-spacing: 3px;
+}
+
+.scene {
+    background: white;
+    border-radius: 25px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    box-shadow: 0 10px 40px #0002;
+}
+
+.character {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: linear-gradient(#fff, #ffe8f0);
+}
+
+.character img {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 30px;
+    border: 5px solid white;
+    box-shadow: 0 15px 35px #0003;
+}
+
+.dialogue {
+    padding: 25px;
+    background: #111;
+    color: white;
+}
+
+.dialogue h2 {
+    color: #ff6ca3;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.dialogue p {
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.choice {
+    background: white;
+    color: #111;
+    padding: 15px 18px;
+    border-radius: 15px;
+    border: 2px solid #eee;
+    text-align: left;
+    font-size: 16px;
+}
+
+.choice:hover {
+    border-color: #ff4f91;
+    transform: translateY(-2px);
+}
+
+.continue {
+    margin-top: 18px;
+    padding: 15px;
+    border-radius: 30px;
+    background: #111;
+    color: white;
+    font-size: 15px;
+}
+
+.continue:hover {
+    background: #ff4f91;
+}
+
+#endingScreen {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, #40182a 0%, #111 60%);
+}
+
+.bigHeart {
+    font-size: 100px;
+    color: #ff4f91;
+    animation: heartbeat 1.5s infinite;
+}
+
+#endingScreen h1 {
+    margin-top: 20px;
+}
+
+#endingScreen p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.question {
+    margin-top: 35px;
+    font-size: 30px !important;
+    font-weight: bold;
+}
+
+.finalButtons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.finalButtons button {
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+#yesButton {
+    background: #ff4f91;
+    color: white;
+}
+
+#noButton {
+    background: white;
+    color: #111;
+}
+
+#finalMessage {
+    margin-top: 25px;
+    color: #ff7eaa;
+    font-weight: bold;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .scene {
+        min-height: 430px;
+    }
+
+    .character img {
+        width: 190px;
+        height: 250px;
+    }
+
+    .dialogue p {
+        font-size: 17px;
+    }
+}
