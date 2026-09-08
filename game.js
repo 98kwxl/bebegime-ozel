@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             text: "Bir gün telefonuna garip bir mesaj geldi. Mesajda sadece bir adres ve şu yazıyordu: 'Beni bul.'",
             choices: [
                 {
-                    text: "Adrese git.",
+                    text: "Mesaja git.",
                     next: 1,
                     correct: false
                 },
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==============================
     yesButton.addEventListener("click", function () {
         finalMessage.textContent =
-            "O zaman bu hikâyenin yeni bölümünü birlikte yazalım. ❤️";
+            "İyi ki benimsin bebeğim.";
         confettiEffect();
         yesButton.textContent =
             "❤️";
